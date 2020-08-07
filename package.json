@@ -1,0 +1,30 @@
+{
+  "name": "use-selector",
+  "version": "1.0.0",
+  "description": "useSelector hook for computing a state from another state (or any value)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "react": "^16.13.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/assister-ai/use-selector.git"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "useState",
+    "useSelector",
+    "state",
+    "state-management"
+  ],
+  "author": "Keyvan M. Sadeghi <keyvan.m.sadeghi@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/assister-ai/use-selector/issues"
+  },
+  "homepage": "https://github.com/assister-ai/use-selector#readme"
+}
