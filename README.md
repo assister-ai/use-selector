@@ -25,8 +25,8 @@ import React, { useState } from 'react';
 import { useSelector } from 'use-selector';
 
 function Form() {
-  const title = useState('');
-  const text = useState('');
+  const [title, setTitle] = useState('');
+  const [text, setText] = useState('');
   const isFormValid = useSelector(() => title !=== '' && text !== '', [title, text]);
 
   return (
