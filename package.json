@@ -1,6 +1,6 @@
 {
   "name": "use-selector",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "useSelector hook for computing a state from another state",
   "main": "index.js",
   "esnext": "index.js",
