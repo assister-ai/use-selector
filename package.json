@@ -1,11 +1,9 @@
 {
   "name": "use-selector",
   "version": "1.0.0",
-  "description": "useSelector hook for computing a state from another state (or any value)",
+  "description": "useSelector hook for computing a state from another state",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "esnext": "index.js",
   "dependencies": {
     "react": "^16.13.1"
   },

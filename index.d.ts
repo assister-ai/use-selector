@@ -1,2 +1,1 @@
-export function useSelector<T, S>(state: T, selector: (state: T) => S): S;
-
+export function useSelector<T>(selector: () => T, deps?: React.DependencyList | undefined): T;

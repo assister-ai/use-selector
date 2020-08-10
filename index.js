@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react';
 
-export function useSelector(state, selector) {
-  const [resultingState, setResultingState] = useState();
+export function useSelector(selector, deps) {
+  const [state, setState] = useState(selector());
   useEffect(() => {
-    setResultingState(selector(state));
-  }, [state, selector, setResultingState]);
-  return resultingState;
+    setState(selector());
+  }, deps);
+  return state;
 };
-
