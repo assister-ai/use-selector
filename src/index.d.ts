@@ -16,11 +16,11 @@ export function useSelector<T>(selector: Selector<T>): [T, Dispatch<SetStateActi
 export function selectKey<T, K extends keyof T, V extends T[K]>(
   parent: T,
   key: K,
-  setParent: false | ((newValue: T) => void)
+  setParent?: false | ((newValue: T) => void)
 ): Selector<V>;
 
 export function selectProjection<T, K extends keyof T, P extends Pick<T, K>>(
   parent: T,
   keys: K[],
-  setParent: false | ((newValue: Partial<T>) => void)
+  setParent?: false | ((newValue: Partial<T>) => void)
 ): Selector<P>;

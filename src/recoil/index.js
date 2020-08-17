@@ -5,12 +5,11 @@ import { camelCase } from 'lodash';
 export function keySelector(state, key) {
   return selector({
     key: `${key}State`,
-    get: ({ get }) => selectKey(get(state), key).get(),
-    set: ({ get, set }, newValue) => selectKey(
-      get(state),
-      key,
-      value => set(state, value)
-    ).set(newValue)
+    get: ({ get }) => get(state)[key],
+    set: ({ get, set }, newValue) => set(state, {
+      ...get(state),
+      [key]: newValue
+    })
   });
 }
 
@@ -24,11 +23,13 @@ export function projection(state, keys) {
   console.log(joinedNameByAnd)
   return selector({
     key: joinedNameByAnd,
-    get: ({ get }) => selectProjection(get(state), keys).get(),
-    set: ({ get, set }, newValue) => selectProjection(
-      get(state),
-      keys,
-      value => set(state, value)
-    ).set(newValue)
+    get: ({ get }) => keys.reduce(
+      (accumulator, key) => ({ ...accumulator, [key]: get(state)[key] }),
+      {}
+    ),
+    set: ({ get, set }, newValue) => set(
+      state,
+      keys.reduce((accumulator, key) => ({ ...accumulator, [key]: newValue}), get(state))
+    )
   });
 }
