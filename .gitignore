@@ -178,3 +178,7 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/react,node,windows,linux,visualstudiocode
+
+# Lock files
+package-lock.json
+yarn.lock

@@ -1,9 +1,4 @@
-import { useState, useEffect } from 'react';
-
-export function useSelector(selector, deps) {
-  const [state, setState] = useState(selector());
-  useEffect(() => {
-    setState(selector());
-  }, deps);
-  return state;
-};
+// Set options as a parameter, environment variable, or rc file.
+// eslint-disable-next-line no-global-assign
+require = require("esm")(module/* , options */)
+module.exports = require("./src")
