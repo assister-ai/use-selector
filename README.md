@@ -1,4 +1,5 @@
 [![npm version](https://badge.fury.io/js/use-selector.svg)](https://www.npmjs.com/package/use-selector)
+<a href="http://travis-ci.org/assister/use-selector"><img src="https://api.travis-ci.org/assister/use-selector.svg?branch=master" alt="Build Status"></a>
 
 # useSelector
 
